@@ -1,5 +1,12 @@
 class Post
-  attr_reader :title, :url, :permalink, :author, :subreddit, :score, :num_comments
+  attr_reader :title,
+              :url,
+              :permalink,
+              :author,
+              :subreddit,
+              :score,
+              :num_comments,
+              :nsfw
 
   def initialize(raw_data)
     @title = raw_data[:title]
@@ -9,5 +16,6 @@ class Post
     @subreddit = raw_data[:subreddit]
     @score = raw_data[:score]
     @num_comments = raw_data[:num_comments]
+    @nsfw = raw_data[:over_18]
   end
 end

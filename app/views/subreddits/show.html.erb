@@ -20,7 +20,8 @@
       </td>
       <td>
         <%= link_to post.title, post.url %>
-      </td>
+        <% if post.nsfw %> <span class="nsfw"> nsfw </span> <% end %>
+        </td>
       <td>
         <%= post.author %>
       </td>
