@@ -11,4 +11,9 @@ class RedditService
     data = get("/subreddits/mine/subscriber", user)
     data[:children]
   end
+
+  def self.posts(subreddit, user)
+    data = get("/r/#{subreddit}/hot", user)
+    data[:children]
+  end
 end

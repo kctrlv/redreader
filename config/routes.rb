@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#show'
 
   resources :subreddits, only: [:index]
+
+  get 'r/:subreddit', to: 'subreddits#show'
 end

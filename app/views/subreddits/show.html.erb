@@ -1,0 +1,32 @@
+<table class='posts'>
+  <tr>
+    <th>
+      Score
+    </th>
+    <th>
+      Title
+    </th>
+    <th>
+      Author
+    </th>
+    <th>
+      Comments
+    </th>
+  </tr>
+  <% @posts.each do |post| %>
+    <tr>
+      <td>
+        <%= post.score %>
+      </td>
+      <td>
+        <%= link_to post.title, post.url %>
+      </td>
+      <td>
+        <%= post.author %>
+      </td>
+      <td>
+        <%= link_to "#{post.num_comments}", post.permalink %>
+      </td>
+    </tr>
+  <% end %>
+</table>
