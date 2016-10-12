@@ -9,6 +9,13 @@ require 'capybara/rspec'
 require 'capybara/rails'
 require_relative "helpers/spec_helpers"
 include SpecHelpers
+require 'webmock'
+
+VCR.configure do |config|
+  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  config.hook_into :webmock
+end
+
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
