@@ -16,4 +16,9 @@ class RedditService
     data = get("/r/#{subreddit}/hot", user)
     data[:children]
   end
+
+  def self.about(subreddit, user)
+    data = get("/r/#{subreddit}/about", user)
+    data
+  end
 end
