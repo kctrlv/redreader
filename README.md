@@ -22,3 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
+
+---
+# before action on dashboard controller for current user
+# something like require_login
+# remember might have to set headers for post/update requests

@@ -1,0 +1,20 @@
+<table class="user_info">
+  <tr>
+    <td>
+      Comment Karma
+    </td>
+    <td>
+      <%= current_user.comment_karma %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Link Karma
+    </td>
+    <td>
+      <%= current_user.link_karma %>
+    </td>
+  </tr>
+</table>
+
+<%= link_to "My Subreddits", subreddits_path %>

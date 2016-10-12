@@ -1,0 +1,14 @@
+<h1>My Subreddits</h1>
+
+<table>
+  <% @subreddits.each do |subreddit| %>
+    <tr>
+      <td>
+        <%= link_to subreddit.title, subreddit.url %>
+      </td>
+      <td>
+        <%= subreddit.description %>
+      </td>
+    </tr>
+  <% end %>
+</table>
