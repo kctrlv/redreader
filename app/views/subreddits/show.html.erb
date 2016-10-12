@@ -32,7 +32,7 @@
         <%= post.author %>
       </td>
       <td>
-        <%= link_to "#{post.num_comments}", post.permalink %>
+        <%= link_to "#{post.num_comments}", "/r/#{post.subreddit}/comments/#{post.id}" %>
       </td>
     </tr>
   <% end %>

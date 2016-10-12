@@ -1,0 +1,6 @@
+<span class="comment_author"> <b> <%= comment.author %>: </b> </span>
+<p class="comment_body"> <i> <%= comment.body %> </i> </p>
+<ul>
+  <%= render partial: "comment", collection: comment.children %>
+  <br>
+</ul>

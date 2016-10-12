@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :subreddits, only: [:index]
 
   get 'r/:subreddit', to: 'subreddits#show'
+  get 'r/:subreddit/comments/:post', to: 'comments#index'
 end

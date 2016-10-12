@@ -1,7 +1,7 @@
 class Post
   attr_reader :title,
               :url,
-              :permalink,
+              :id,
               :author,
               :subreddit,
               :score,
@@ -11,7 +11,7 @@ class Post
   def initialize(raw_data)
     @title = raw_data[:title]
     @url = raw_data[:url]
-    @permalink = raw_data[:permalink]
+    @id = raw_data[:id]
     @author = raw_data[:author]
     @subreddit = raw_data[:subreddit]
     @score = raw_data[:score]
