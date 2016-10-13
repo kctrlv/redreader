@@ -21,9 +21,4 @@ class Subreddit
     raw_about = RedditService.about(subreddit, user)
     SubredditInfo.new(raw_about)
   end
-
-  def self.rules(subreddit, user)
-    # raw_rules = RedditService.rules(subreddit, user)[:data]
-  end
-
 end
