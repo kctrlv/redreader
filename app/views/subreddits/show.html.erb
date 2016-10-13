@@ -1,7 +1,7 @@
 <div class="subreddit_info">
   <h1 class='name'> <%= @info.display_name %> </h1>
-  <p class='public_description'> <%= @info.public_description %> </p>
   <h5 class='subscriber_count'> Subscribers: <%= @info.subscribers %></h4>
+  <p class='public_description'> <%= @info.public_description %> </p>
 </div>
 
 <table class='posts'>
@@ -21,17 +21,17 @@
   </tr>
   <% @posts.each do |post| %>
     <tr>
-      <td>
+      <td class='score'>
         <%= post.score %>
       </td>
-      <td>
+      <td class='link'>
         <%= link_to post.title, post.url %>
         <% if post.nsfw %> <span class="nsfw"> nsfw </span> <% end %>
         </td>
-      <td>
+      <td class='author'>
         <%= post.author %>
       </td>
-      <td>
+      <td class='comments'>
         <%= link_to "#{post.num_comments}", "/r/#{post.subreddit}/comments/#{post.id}" %>
       </td>
     </tr>
