@@ -78,7 +78,7 @@ td.comments {
 }
 
 a {
-  color: #ddd;
+  color: #ccc;
 }
 
 a:visited {
@@ -92,4 +92,19 @@ a:visited {
 
 .postrow {
   padding-top: 110px;
+}
+
+.votes a:nth-child(1) {
+  text-decoration: none;
+  color: green;
+}
+
+.votes a:nth-child(2) {
+  text-decoration: none;
+  color: yellow;
+}
+
+.votes a:nth-child(3) {
+  text-decoration: none;
+  color: red;
 }
