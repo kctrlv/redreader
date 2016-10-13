@@ -7,8 +7,9 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'dashboard#show'
 
-  resources :subreddits, only: [:index]
-
-  get 'r/:subreddit', to: 'subreddits#show'
-  get 'r/:subreddit/comments/:post', to: 'comments#index'
+  resources :r, as: 'subreddits', controller: :subreddits, only: [:index, :show] do
+    resources :comments, only: [:show]
+  end
+  # get 'r/:subreddit', to: 'subreddits#show'
+  # get 'r/:subreddit/comments/:post', to: 'comments#index'
 end

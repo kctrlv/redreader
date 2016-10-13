@@ -4,7 +4,8 @@ class SubredditsController < ApplicationController
   end
 
   def show
-    @posts = Subreddit.posts(params['subreddit'], current_user)
-    @info = Subreddit.about(params['subreddit'], current_user)
+    # byebug
+    @posts = Subreddit.posts(params['id'], current_user)
+    @info = Subreddit.about(params['id'], current_user)
   end
 end

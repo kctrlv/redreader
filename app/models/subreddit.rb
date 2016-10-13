@@ -14,7 +14,7 @@ class Subreddit
 
   def self.posts(subreddit, user)
     raw_posts = RedditService.posts(subreddit, user)
-    raw_posts.map{ |raw_post| Post.new(raw_post[:data]) }
+    raw_posts.map{ |raw_post| Post.new(raw_post[:data]) }[0..14]
   end
 
   def self.about(subreddit, user)
