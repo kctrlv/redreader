@@ -46,6 +46,11 @@ td.score {
   text-align: center;
 }
 
+td.link {
+  text-align: center;
+  max-width: 50em;
+}
+
 td.author {
   text-align: center;
 }

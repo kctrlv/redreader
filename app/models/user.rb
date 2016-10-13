@@ -26,7 +26,7 @@ class User < ApplicationRecord
       grant_type: 'refresh_token',
       refresh_token: self.refresh_token,
       response_type: 'code',
-      scope: 'identity,read,mysubreddits',
+      scope: 'identity,mysubreddits',
       client_id: ENV['api_key'],
       state: SecureRandom.hex,
       redirect_uri: 'http://localhost:3000/auth/reddit/callback'
