@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :r, as: 'subreddits', controller: :subreddits, only: [:index, :show] do
     resources :comments, only: [:show]
   end
+
+  get '/vote/:comment', to: 'comments#vote', as: "vote_comment"
   # get 'r/:subreddit', to: 'subreddits#show'
   # get 'r/:subreddit/comments/:post', to: 'comments#index'
 end

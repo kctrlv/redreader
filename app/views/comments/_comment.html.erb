@@ -1,4 +1,7 @@
 <% if comment.author %>
+  <%= link_to "^", vote_comment_path(comment.name, 1) %>
+  <%= link_to "o", vote_comment_path(comment.name, 0) %>
+  <%= link_to "v", vote_comment_path(comment.name, -1) %>
   <span class='comment_score'> (<%= comment.score %>) </span>
   <span class="comment_author"> <b> <%= comment.author %>: </b> </span>
   <p class="comment_body"> <%= comment.body %> </p>

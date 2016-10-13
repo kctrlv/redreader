@@ -47,7 +47,6 @@ td.score {
 }
 
 td.link {
-  text-align: center;
   max-width: 50em;
 }
 
@@ -59,12 +58,12 @@ td.comments {
   text-align: center;
 }
 
+.subreddit_description {
+  max-width: 50em;
 
-
-
-a {
-  color: #ddd;
 }
+
+
 
 .comment_author {
   color: #89a;
@@ -77,6 +76,11 @@ a {
 .comment_body {
   color: #ccc;
 }
+
+a {
+  color: #ddd;
+}
+
 a:visited {
   color: #567;
 }
