@@ -11,6 +11,7 @@
   <body>
     <% if current_user %>
       Hello, <%= current_user.screen_name %>
+      (<%= current_user.link_karma %>:<%= current_user.comment_karma %>)
       <%= link_to "Logout", logout_path, method: :delete %>
     <% else %>
       <%= link_to "Sign In with Reddit", reddit_login_path %>

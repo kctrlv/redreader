@@ -1,7 +1,7 @@
 <% if comment.author %>
   <span class='comment_score'> (<%= comment.score %>) </span>
   <span class="comment_author"> <b> <%= comment.author %>: </b> </span>
-  <p class="comment_body"> <i> <%= comment.body %> </i> </p>
+  <p class="comment_body"> <%= comment.body %> </p>
   <ul>
     <%= render partial: "comment", collection: comment.children %>
     <br>

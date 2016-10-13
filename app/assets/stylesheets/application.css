@@ -14,7 +14,73 @@
  *= require_self
  */
 
+body {
+  background-color: #121212;
+  color: #ddd;
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+th {
+  color: #567;
+}
+
+p {
+  max-width: 50em;
+  margin-bottom: 3em;
+}
+
+h1.name {
+  display: inline-block;
+}
+
+h5.subscriber_count {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+td {
+  padding-top: 8px;
+}
+
+td.score {
+  text-align: center;
+}
+
+td.author {
+  text-align: center;
+}
+
+td.comments {
+  text-align: center;
+}
+
+
+
+
+a {
+  color: #ddd;
+}
+
+.comment_author {
+  color: #89a;
+}
+
+.comment_score {
+  color: #567;
+}
+
+.comment_body {
+  color: #ccc;
+}
+a:visited {
+  color: #567;
+}
+
 .nsfw {
   color: white;
   background-color: red;
+}
+
+.postrow {
+  padding-top: 110px;
 }

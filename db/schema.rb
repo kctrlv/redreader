@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161011074346) do
+ActiveRecord::Schema.define(version: 20161013030156) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20161011074346) do
     t.integer  "link_karma"
     t.integer  "comment_karma"
     t.datetime "created_at"
+    t.string   "refresh_token"
   end
 
 end

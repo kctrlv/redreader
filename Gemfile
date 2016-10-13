@@ -33,6 +33,8 @@ gem 'faraday'
 gem 'figaro'
 gem 'omniauth-oauth2', '~> 1.3.1'
 gem 'omniauth-reddit', :git => 'git://github.com/jackdempsey/omniauth-reddit.git'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
