@@ -20,18 +20,17 @@ class User < ApplicationRecord
   end
 
   def refresh
-    conn = Faraday.new(url: 'https://www.reddit.com')
-    # res = conn.post ('/api/v1/access_token') do |req|
-    #   req.headers['Authorization'] = "Bearer #{self.token}"
-    #   req.body = "{ \"grant_type\": \"refresh_token\", \"refresh_token\": \"#{self.refresh_token}\" }"
-    # end
-    conn.headers['Authorization'] = "Bearer #{self.token}"
-
-    response = conn.post('/api/v1/access_token', {
-      grant_type:    'refresh_token',
-      refresh_token: self.refresh_token })
-    # byebug
-    # response = conn.post('/api/v1/access_token',  { grant_type: 'refresh_token', refresh_token: self.refresh_token })
-    update_token(response['access_token'])
+    conn = Faraday.new(url: 'https://ssl.reddit.com')
+    conn.basic_auth(ENV['api_key'], ENV['api_secret'])
+    response = conn.post('/api/v1/access_token',  {
+      grant_type: 'refresh_token',
+      refresh_token: self.refresh_token,
+      response_type: 'code',
+      scope: 'identity,read,mysubreddits',
+      client_id: ENV['api_key'],
+      state: SecureRandom.hex,
+      redirect_uri: 'http://localhost:3000/auth/reddit/callback'
+      })
+    update_token(JSON.parse(response.body)['access_token'])
   end
 end
